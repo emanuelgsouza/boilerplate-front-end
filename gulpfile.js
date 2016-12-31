@@ -1,29 +1,20 @@
 const gulp = require('gulp');
+const glob = require('glob');
 const br = require('browser-sync');
 const reload = br.reload;
 
-const args = require('yargs')
-              .default('production', false)
-              .alias('p', 'production')
-              .argv;
+const args = require('yargs').default('production', false).alias('p', 'production').argv;
 
-// Chamando as tasks de styles
-require('./gulpTasks/styles.js')(args, reload);
-
-// Chamado as tasks de imagens
-require('./gulpTasks/images.js')(args, reload);
-
-// Chamando as tasks de html
-require('./gulpTasks/minifyHtml.js')(args, reload);
-
-// Chamando as tasks de js
-require('./gulpTasks/scripts.js')(args, reload);
+glob.sync('./gulpTasks/*.js', { realPath: true })
+  .forEach(function (file) {
+    require(file)(args, reload);
+});
 
 gulp.task('default', ['sass', 'imagemin', 'htmlmin', 'script'], function () {
   br.init({
     server: {
       baseDir: './dist',
-      index: 'forca.html'
+      index: 'index.html'
     }
   });
 
