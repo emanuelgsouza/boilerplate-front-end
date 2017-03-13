@@ -20,19 +20,23 @@ npm install
 --src/
 ----assets/
 ------sass/
+--------base/
+--------components/
+--------modules/
+--------utilities/
 ------img/
 ----js/
 ----index.html
---gulpTaks/
+--tasks/
 --gulpfile.js
 --package.json
 --README.md
 --.gitignore
 ````
 
-+ The folder *src* contains the source code of project. In him, set the files *js*, *html*, *sass* and *images*, following the organization of the model above. If the folders not exists like the model above, create them.
++ The folder *src* contains the source code of project. In him, set the files *js*, *html*, *sass* , *pug*, and *images*, following the organization of the model above. If the folders not exists like the model above, create them.
 
-+ The folder *gulpTasks* contains the tasks for development and build.
++ The folder *tasks* contains the tasks for development and build.
 
 + The file gulpfile.js has already been optimized to work on this model, but, you can customize any way you want.
 
