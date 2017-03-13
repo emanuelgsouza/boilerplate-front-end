@@ -7,7 +7,7 @@ const args = require('yargs')
   .default('production', false)
   .alias('p', 'production').argv
 
-glob.sync('./gulpTasks/*.js', { realPath: true })
+glob.sync('./tasks/*.js', { realPath: true })
   .forEach(function (file) {
     require(file)(args, reload)
 })
