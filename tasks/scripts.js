@@ -1,7 +1,6 @@
 module.exports = (gulp, arg, sources) => {
-  const jsSrc = sources.js
-  const dist = sources.dist + '/js'
+  const dist = sources.DIST_SRC + '/js'
   gulp.task('script', function () {
-    gulp.src(jsSrc).pipe(gulp.dest(dist))
+    gulp.src(sources.JS_SRC).pipe(gulp.dest(dist))
   })
 }

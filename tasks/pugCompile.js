@@ -1,10 +1,9 @@
 const pug = require('gulp-pug')
 
 module.exports = (gulp, arg, sources) => {
-  const templateSrc = sources.template
-  const dist = sources.dist + '/'
+  const dist = sources.DIST_SRC + '/'
   gulp.task('compilePug', () => {
-    gulp.src(templateSrc)
+    gulp.src(sources.PUG_SRC)
       .pipe(pug({}))
       .pipe(gulp.dest(dist))
   })

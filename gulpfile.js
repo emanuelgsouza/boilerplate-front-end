@@ -11,7 +11,7 @@ glob.sync(path.resolve(__dirname, './tasks/*.js'), { realPath: true })
 })
 
 // Task for dev
-require(path.resolve(__dirname, './tasks/dev.js'))(gulp, tasks.devTasks)
+require(path.resolve(__dirname, './tasks/dev.js'))(gulp, tasks.devTasks, sources)
 
 // Task for build
-require(path.resolve(__dirname, './tasks/build.js'))(gulp, tasks.buildTasks)
+require(path.resolve(__dirname, './tasks/build.js'))(gulp, tasks.buildTasks, sources)

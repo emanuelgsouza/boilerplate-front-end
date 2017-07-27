@@ -1,10 +1,9 @@
 const imagemin = require('gulp-imagemin')
 
 module.exports = (gulp, arg, sources) => {
-  const imgSrc = sources.img
-  const dist = sources.dist + '/img'
+  const dist = sources.DIST_SRC + '/img'
   gulp.task('imagemin', function () {
-    gulp.src(imgSrc)
+    gulp.src(sources.IMG_SRC)
       .pipe(imagemin())
       .pipe(gulp.dest(dist))
   })

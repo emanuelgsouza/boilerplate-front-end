@@ -1,9 +1,9 @@
 const path = require('path')
 
 module.exports = {
-  js: './src/js/**/*.js',
-  sass: './src/assets/sass/**/*.sass',
-  img: './src/assets/img/**',
-  template: './src/views/*.pug',
-  dist: path.resolve(__dirname, '../dist')
+  JS_SRC: './src/js/**/*.js',
+  SASS_SRC: './src/assets/sass/**/*.sass',
+  IMG_SRC: './src/assets/img/**',
+  PUG_SRC: './src/views/*.pug',
+  DIST_SRC: path.resolve(__dirname, '../dist')
 }
