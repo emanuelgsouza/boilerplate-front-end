@@ -1,29 +1,17 @@
 const gulp = require('gulp')
 const glob = require('glob')
+const sources = require('./config/sources')
+const tasks = require('./config/tasks')
+const path = require('path')
 
 // Call functions for export tasks
-glob.sync('./tasks/*.js', { realPath: true })
+glob.sync(path.resolve(__dirname, './tasks/*.js'), { realPath: true })
   .forEach(function (file) {
-    require(file)(gulp)
+    require(file)(gulp, [], sources)
 })
 
-const devTasks = [
-  'server',
-  'sass',
-  'imagemin',
-  'compilePug',
-  'script'
-]
-
-const buildTasks = [
-  'sass',
-  'imagemin',
-  'compilePug',
-  'script'
-]
-
 // Task for dev
-require('./tasks/dev.js')(gulp, devTasks)
+require(path.resolve(__dirname, './tasks/dev.js'))(gulp, tasks.devTasks)
 
 // Task for build
-require('./tasks/build.js')(gulp, buildTasks)
+require(path.resolve(__dirname, './tasks/build.js'))(gulp, tasks.buildTasks)
