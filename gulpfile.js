@@ -11,14 +11,14 @@ const devTasks = [
   'server',
   'sass',
   'imagemin',
-  'compilePug','htmlmin',
+  'compilePug',
   'script'
 ]
 
 const buildTasks = [
   'sass',
   'imagemin',
-  'compilePug','htmlmin',
+  'compilePug',
   'script'
 ]
 
