@@ -1,12 +1,9 @@
-const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
-const gulpif = require('gulp-if');
+const imagemin = require('gulp-imagemin')
 
-module.exports = function (args, reload) {
+module.exports = gulp => {
   gulp.task('imagemin', function () {
     gulp.src('./src/assets/img/**/*')
-      .pipe(gulpif(args.production, imagemin()))
-      .pipe(gulp.dest('dist/img'));
-    if (!args.production) reload();
-  });
-};
+      .pipe(imagemin())
+      .pipe(gulp.dest('dist/img'))
+  })
+}

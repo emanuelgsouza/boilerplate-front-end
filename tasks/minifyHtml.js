@@ -1,17 +1,14 @@
-const gulp = require('gulp');
-const htmlmin = require('gulp-htmlmin');
-const gulpif = require('gulp-if');
+const htmlmin = require('gulp-htmlmin')
 
-module.exports = function (args, reload) {
+module.exports = gulp => {
   gulp.task('htmlmin', function () {
     gulp.src('./src/**/*.html')
-      .pipe(gulpif(args.production, htmlmin(
+      .pipe(htmlmin(
         {
           collapseWhitespace: true,
           removeComments: true
         }
-      )))
-      .pipe(gulp.dest('./dist'));
-    if (!args.production) reload();
-  });
-};
+      ))
+      .pipe(gulp.dest('./dist'))
+  })
+}
