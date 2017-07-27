@@ -1,7 +1,7 @@
-module.exports = (gulp, devTasks) => {
+module.exports = (gulp, devTasks, sources) => {
   gulp.task('dev', devTasks, function () {
-    gulp.watch('./src/js/*.js', ['script'])
-    gulp.watch('./src/assets/sass/**/*.sass', ['sass'])
-    gulp.watch('./src/views/**/*.pug', ['compilePug'])
+    gulp.watch(sources.js, ['script'])
+    gulp.watch(sources.sass, ['sass'])
+    gulp.watch(sources.template, ['compilePug'])
   })
 }
