@@ -1,6 +1,16 @@
-include includes/header.pug
+extends layouts/default.pug
 
-body
-  p Boilerplate front-end
+block vars
+  - var pageTitle = ''
+  - var bodyClass = ''
+  - var description = ''
+  - var title = ''
+  - var site = ''
+  - var author = ''
+  - var image = ''
+  - var sitename = ''
+  - var themeColor = ''
 
-include includes/script.pug
+block content
+
+  p Boilerplate Front End
