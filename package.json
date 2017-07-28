@@ -13,6 +13,8 @@
   "author": "EmanuelG",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.5",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^7.0.0",
@@ -20,11 +22,13 @@
     "eslint-plugin-standard": "^2.1.1",
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.3.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-pug": "^3.2.0",
     "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
     "node-sass": "^4.1.1",
     "run-sequence": "^2.1.0"
   }
