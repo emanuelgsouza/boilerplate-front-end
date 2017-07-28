@@ -1,4 +1,5 @@
 # Boilerplate-front-end
+
 An boilerplate for get started in front-end project faster
 
 ## Steps
@@ -10,36 +11,25 @@ git clone https://github.com/emanuelgsouza/boilerplate-front-end.git my-project
 ````
 
 * Download the dependencies:
-````bash
-npm install
-````
-
-* Attempt the files and organization them:
 
 ````bash
---src/
-----assets/
-------sass/
---------base/
---------components/
---------modules/
---------utilities/
-------img/
-----js/
-----index.html
---tasks/
---gulpfile.js
---package.json
---README.md
---.gitignore
+yarn
 ````
 
-+ The folder *src* contains the source code of project. In him, set the files *js*, *html*, *sass* , *pug*, and *images*, following the organization of the model above. If the folders not exists like the model above, create them.
+* Run locally:
 
-+ The folder *tasks* contains the tasks for development and build.
+````bash
+yarn run dev
+````
 
-+ The file gulpfile.js has already been optimized to work on this model, but, you can customize any way you want.
+* Clean dist directory:
 
-+ The file README.md can be customize.
+````bash
+yarn run clean
+````
 
-+ The file package.json might customize!
+* Run for build:
+
+````bash
+yarn run build
+````
